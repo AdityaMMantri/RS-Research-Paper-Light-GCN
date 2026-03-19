@@ -217,13 +217,13 @@ D^{-1/2} A D^{-1/2}
 
 | Gowalla | Yelp2018 |
 |:-------:|:--------:|
-| ![Recall Main Table Gowalla](plots/recall_main_table_gowalla.png) | ![Recall Main Table Yelp](plots/recall_main_table_yelp.png) |
+| ![Recall Main Table Gowalla](assests/recall_main_table_gowalla.png) | ![Recall Main Table Yelp](assests/recall_main_table_yelp.png) |
 
 ### NDCG@20 — Gowalla vs Yelp2018
 
 | Gowalla | Yelp2018 |
 |:-------:|:--------:|
-| ![NDCG Main Table Gowalla](plots/ndcg_main_table_gowalla.png) | ![NDCG Main Table Yelp](plots/ndcg_main_table_yelp.png) |
+| ![NDCG Main Table Gowalla](assests/ndcg_main_table_gowalla.png) | ![NDCG Main Table Yelp](assests/ndcg_main_table_yelp.png) |
 
 **Takeaway:** Your implementation consistently reproduces the correct ranking: LightGCN (Paper) > NGCF > LightGCN (Yours, slightly lower due to sampling/init differences). The trend, relative gains, and cross-layer behavior are all faithfully preserved.
 
