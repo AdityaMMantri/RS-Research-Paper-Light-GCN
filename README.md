@@ -135,42 +135,6 @@ D^{-1/2} A D^{-1/2}
 - Left/right normalization → unstable and worse
 
 ---
-
-# 📊 3. Main Table (Reproduction of Table 3)
-
-## 🔹 Gowalla
-
-| Layers | NGCF | LightGCN (Paper) | Yours |
-|--------|------|------------------|-------|
-| 1 | 0.1556 | 0.1755 | 0.1641 |
-| 2 | 0.1547 | 0.1777 | 0.1694 |
-| 3 | 0.1569 | 0.1823 | 0.1700 |
-| 4 | 0.1570 | 0.1830 | 0.1680 |
-
----
-
-## 🔹 Yelp2018
-
-| Layers | NGCF | LightGCN (Paper) | Yours |
-|--------|------|------------------|-------|
-| 1 | 0.0543 | 0.0631 | 0.0596 |
-| 2 | 0.0566 | 0.0622 | 0.0614 |
-| 3 | 0.0579 | 0.0639 | 0.0609 |
-| 4 | 0.0566 | 0.0649 | 0.0603 |
-
----
-
-## 🔥 Insight
-
-- LightGCN > NGCF (confirmed)
-- Increasing layers improves performance (up to ~3–4)
-- Your implementation preserves:
-  - trend ✔
-  - ranking ✔
-  - behavior ✔
-
----
-
 # 📈 Visual Results
 
 > All plots are organized by experiment. Each section shows **Paper vs Produced** side by side for direct visual comparison.
