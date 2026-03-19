@@ -90,33 +90,6 @@ This project is a **comparative and experimental study**:
 
 ---
 
-## ⚠️ Important Note
-
-Your current repo structure (from screenshots) is **messy and inconsistent**:
-- Mixed naming (`MAIN TABLE`, `TABLE-5`, `LIGHT-GCN-SINGLE`)
-- Deep nested folders with no abstraction
-
-### This structure fixes:
-- Separation of **data / code / results / plots**
-- Clear mapping to:
-  - Main Table (Table 3)
-  - Table 5
-  - LightGCN-Single experiments
-
----
-
-## 🔥 If you want stronger impact
-
-Do this:
-- Move all `.ipynb` → `notebooks/`
-- Move all scripts → `src/`
-- Keep only **clean outputs** in `results/`
-
-Otherwise your repo looks like:
-> student project ❌  
-not  
-> research project ✔
-
 ## 🧠 Core Model
 
 ### Propagation
