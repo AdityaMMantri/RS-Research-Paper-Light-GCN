@@ -64,15 +64,15 @@ This project is a **comparative and experimental study**:
 │       ├── gowalla/
 │       └── yelp2018/
 │
-├── plots/
-│   ├── light_gcn_single_paper.png
-│   ├── light_gcn_single_produced.png
-│   ├── gowalla_table5_produced.png
-│   ├── yelp_table5_produced.png
-│   ├── recall_main_table_gowalla.png
-│   ├── recall_main_table_yelp.png
-│   ├── ndcg_main_table_gowalla.png
-│   └── ndcg_main_table_yelp.png
+├── test/
+│   ├── final_plot.ipynb
+│   ├── single_results_gowalla.json
+│   ├── gowalla_results.json
+│   ├── table5_eval_results_gowalla.json
+│   ├── table5_eval_results_yelp.json
+│   ├── yelp_results.json
+│
+│
 │
 ├── assets/                        # Images used in README
 │   ├── light_gcn_single_paper.png
@@ -84,7 +84,6 @@ This project is a **comparative and experimental study**:
 │   ├── ndcg_main_table_gowalla.png
 │   └── ndcg_main_table_yelp.png
 │
-├── requirements.txt
 └── README.md
 ```
 
