@@ -183,7 +183,7 @@ D^{-1/2} A D^{-1/2}
 
 | Paper (Reference) | Produced (Reproduced) |
 |:-----------------:|:---------------------:|
-| ![LightGCN-Single Paper](plots/light_gcn_single_paper.png) | ![LightGCN-Single Produced](plots/light_gcn_single_produced.png) |
+| ![LightGCN-Single Paper](assests/light_gcn_single_paper.png) | ![LightGCN-Single Produced](assests/light_gcn_single_produced.png) |
 
 **Takeaway:** Both plots confirm that LightGCN-Single peaks around K=2 and degrades at K=3–4 due to over-smoothing. Your reproduction captures this degradation curve faithfully.
 
