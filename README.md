@@ -18,8 +18,104 @@ This project is a **comparative and experimental study**:
 4. Reproduce:
    - **Main Table (Table 3)**
    - **Normalization Study (Table 5)**
+   - **Light-GCN Single (Figure 4)**
 
 ---
+## 🗂️ Repository Structure
+
+```
+.
+├── data/
+│   ├── gowalla/
+│   │   ├── train.txt
+│   │   └── test.txt
+│   └── yelp2018/
+│       ├── train.txt
+│       └── test.txt   
+│
+├── src/
+│   ├── eda.ipynb                   # Exploratory Data Analysis (degree distribution, sparsity)
+│   ├── model_train.ipynb           # Main LightGCN training (Gowalla & Yelp2018)
+│   ├── lightgcn-single.ipynb       # LightGCN-Single training (K = 1,2,3,4)
+│   ├── table5_part1.ipynb          # Table 5 normalization (Sym, Left, Right)
+│   └── table5_part2.ipynb          # Table 5 normalization variants (L1, L1-L, L1-R)
+│
+│
+├── results/
+│   ├── main_table/
+│   │   ├── gowalla/
+│   │   │   ├── k1/
+│   │   │   ├── k2/
+│   │   │   ├── k3/
+│   │   │   └── k4/
+│   │   └── yelp2018/
+│   │       ├── k1/
+│   │       ├── k2/
+│   │       ├── k3/
+│   │       └── k4/
+│   │
+│   ├── lightgcn_single/
+│   │   ├── k1/
+│   │   ├── k2/
+│   │   ├── k3/
+│   │   └── k4/
+│   │
+│   └── table5/
+│       ├── gowalla/
+│       └── yelp2018/
+│
+├── plots/
+│   ├── light_gcn_single_paper.png
+│   ├── light_gcn_single_produced.png
+│   ├── gowalla_table5_produced.png
+│   ├── yelp_table5_produced.png
+│   ├── recall_main_table_gowalla.png
+│   ├── recall_main_table_yelp.png
+│   ├── ndcg_main_table_gowalla.png
+│   └── ndcg_main_table_yelp.png
+│
+├── assets/                        # Images used in README
+│   ├── light_gcn_single_paper.png
+│   ├── light_gcn_single_produced.png
+│   ├── gowalla_table5_produced.png
+│   ├── yelp_table5_produced.png
+│   ├── recall_main_table_gowalla.png
+│   ├── recall_main_table_yelp.png
+│   ├── ndcg_main_table_gowalla.png
+│   └── ndcg_main_table_yelp.png
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚠️ Important Note
+
+Your current repo structure (from screenshots) is **messy and inconsistent**:
+- Mixed naming (`MAIN TABLE`, `TABLE-5`, `LIGHT-GCN-SINGLE`)
+- Deep nested folders with no abstraction
+
+### This structure fixes:
+- Separation of **data / code / results / plots**
+- Clear mapping to:
+  - Main Table (Table 3)
+  - Table 5
+  - LightGCN-Single experiments
+
+---
+
+## 🔥 If you want stronger impact
+
+Do this:
+- Move all `.ipynb` → `notebooks/`
+- Move all scripts → `src/`
+- Keep only **clean outputs** in `results/`
+
+Otherwise your repo looks like:
+> student project ❌  
+not  
+> research project ✔
 
 ## 🧠 Core Model
 
@@ -99,6 +195,15 @@ E = E^K
 ---
 
 # 📊 2. Table-5 (Normalization Study)
+
+**Normalization Key:**
+- `-Sym` → `D^{-1/2} A D^{-1/2}` (symmetric, both sides) ← **best**
+- `-L` → left-side normalization only
+- `-R` → right-side normalization only
+- `-L1` → L1 norm (no square root)
+- `-L1-L` / `-L1-R` → L1 norm, one side only
+ 
+---
 
 ## 🔹 Gowalla
 
@@ -214,19 +319,14 @@ D^{-1/2} A D^{-1/2}
 ---
 
 # 💡 Final Conclusions
-
-1. LightGCN works because of:
-   - Simplicity
-   - Layer aggregation  
-
-2. Removing:
-   - Feature transformation  
-   - Activation  
-   → improves recommendation performance  
-
-3. LightGCN-Single proves:
-   - Over-smoothing is real  
-   - Layer aggregation is essential  
+**1. Why LightGCN works:**
+Simplicity by design — removing feature transformation and nonlinear activation actually *improves* performance because ID-based embeddings have no semantic features to transform. Layer aggregation (weighted mean of all propagated embeddings) is essential to address over-smoothing and capture multi-hop neighborhood signals simultaneously.
+ 
+**2. What LightGCN-Single proves:**
+Over-smoothing is a real and measurable problem in graph-based recommendation. Using only the final propagated layer (E^K) peaks early (K=2) and degrades at deeper depths — aggregation across layers is not optional for stable performance.
+ 
+**3. Normalization matters:**
+Symmetric sqrt normalization `D^{-1/2} A D^{-1/2}` is uniquely suited to bipartite graphs. One-sided or L1 normalization breaks the symmetry and harms generalization, as confirmed experimentally across both datasets.
 
 ---
 
@@ -242,10 +342,11 @@ python src/test_table5.py
 
 # 🔮 Future Work
 
-- Learnable layer weights  
-- Adaptive depth per user  
-- Contrastive learning extensions  
-- Large-scale graph optimization  
+- **Learnable layer weights** — replace uniform `1/(K+1)` with learned or attention-based `α_k`
+- **Adaptive depth per user** — sparse users may benefit from more layers; active users from fewer
+- **Contrastive learning extensions** — integrate SimCLR-style augmentation on the interaction graph
+- **Large-scale optimization** — fast non-sampling BPR for streaming industrial scenarios
+- **Full 1000-epoch training** — expected to substantially close the gap with reported paper results
 
 ---
 
