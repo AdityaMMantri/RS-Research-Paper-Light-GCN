@@ -197,13 +197,13 @@ D^{-1/2} A D^{-1/2}
 
 | Paper (Reference) | Produced (Reproduced) |
 |:-----------------:|:---------------------:|
-| *(see Table 5 in paper)* | ![Gowalla Table 5](plots/gowalla_table5_produced.png) |
+| *(see Table 5 in paper)* | ![Gowalla Table 5](assests/gowalla_table5_produced.png) |
 
 ### Yelp2018 — Normalization Comparison
 
 | Paper (Reference) | Produced (Reproduced) |
 |:-----------------:|:---------------------:|
-| *(see Table 5 in paper)* | ![Yelp Table 5](plots/yelp_table5_produced.png) |
+| *(see Table 5 in paper)* | ![Yelp Table 5](assests/yelp_table5_produced.png) |
 
 **Takeaway:** Both datasets confirm symmetric normalization as optimal. Left/right-only normalization leads to declining performance as depth increases.
 
