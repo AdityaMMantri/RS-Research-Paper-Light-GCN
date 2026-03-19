@@ -1,0 +1,22 @@
+{
+  "dataset": "yelp",
+  "part": "part1",
+  "norm_modes": [
+    "l1_l",
+    "l1_r",
+    "l1"
+  ],
+  "display_names": [
+    "LightGCN-L1-L",
+    "LightGCN-L1-R",
+    "LightGCN-L1"
+  ],
+  "embed_dim": 64,
+  "n_layers": 3,
+  "epochs": 100,
+  "lr": 0.001,
+  "lambda": 0.0001,
+  "batch_size": 1024,
+  "topk": 20,
+  "save_root": "/kaggle/working/yelp_table5_part1"
+}

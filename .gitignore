@@ -1,0 +1,42 @@
+# =========================
+# PYTHON
+# =========================
+__pycache__/
+*.py[cod]
+
+# =========================
+# JUPYTER
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# ENV
+# =========================
+venv/
+env/
+.venv/
+
+# =========================
+# MODEL FILES (BLOCK HARD)
+# =========================
+*.pt
+*.pth
+*.ckpt
+
+# =========================
+# RESULTS CONTROL
+# =========================
+results/*
+
+# Allow only JSON outputs
+!results/tables/
+!results/tables/**/
+!results/tables/**/results*.json
+
+# =========================
+# OS / IDE
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
