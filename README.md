@@ -55,7 +55,7 @@ E = E^K
 
 ## 🔹 Gowalla (NDCG@20)
 
-| Layers | Paper | Replicated LightGCN | 
+| Layers | Paper (LightGCN) | Replicated LightGCN | 
 |--------|------|------|
 | 1 | 0.1492 | 0.1380 | 
 | 2 | 0.1524 | 0.1422 | 
@@ -66,7 +66,7 @@ E = E^K
 
 ## 🔹 Yelp2018 (Recall@20)
 
-| Layers | Paper | Yours | 
+| Layers | Paper (LightGCN) | Yours | 
 |--------|------|------|
 | 1 | 0.0631 | 0.0573 | 
 | 2 | 0.0622 | 0.0590 |  
@@ -77,7 +77,7 @@ E = E^K
 
 ## 🔹 Yelp2018 (NDCG@20)
 
-| Layers | Paper | Yours |
+| Layers | Paper (LightGCN) | Yours |
 |--------|------|------|
 | 1 | 0.0515 | 0.0466 |
 | 2 | 0.0504 | 0.0484 |
@@ -104,11 +104,12 @@ E = E^K
 
 | Method | Recall | NDCG |
 |--------|--------|------|
-| LightGCN-L1 | ~0.172 | ~0.146 |
-| LightGCN-L2 | ~0.157 | ~0.138 |
-| LightGCN-L3 | ~0.159 | ~0.139 |
-| LightGCN-L4 | ~0.148 | ~0.135 |
-| LightGCN (Sym) | **0.183** | **0.155** |
+| LightGCN-L1 | 0.1379 | 0.1143 |
+| LightGCN-L1-L | 0.1574 | 0.1296 |
+| LightGCN-L1-R | 0.1505 | 0.1266 |
+| LightGCN-L | 0.1580 | 0.1295 |
+| LightGCN-R | 0.1357 | 0.1092 |
+| LightGCN-Sym | 0.1698| 0.1422 |
 
 ---
 
