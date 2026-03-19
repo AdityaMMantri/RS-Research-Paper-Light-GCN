@@ -197,12 +197,13 @@ D^{-1/2} A D^{-1/2}
 
 # ⚠️ Critical Analysis
 
-## Why Your Results Are Lower
+## Why the Replicated Results Are Lower
 
 - Sampling differences  
 - Initialization variance  
 - Slight normalization mismatch  
-- Training dynamics  
+- Training dynamics
+- The training is done on 100 epochs instead of 1000 epochs as mentioned in the Paper 
 
 ## Important:
 
