@@ -22,8 +22,8 @@ def load_data(path):
             data[user] = items
     return data
 
-train_data = load_data(r"F:\SEM-6\ELECTIVES\DEPARTMENT-ELECTIVES\Recommendation Systems\RS-Project\data\gowalla\train.txt")
-test_data  = load_data(r"F:\SEM-6\ELECTIVES\DEPARTMENT-ELECTIVES\Recommendation Systems\RS-Project\data\gowalla\test.txt")
+train_data = load_data(r"F:\SEM-6\ELECTIVES\DEPARTMENT-ELECTIVES\Recommendation Systems\RS-Project\data\yelp2018\train.txt")
+test_data  = load_data(r"F:\SEM-6\ELECTIVES\DEPARTMENT-ELECTIVES\Recommendation Systems\RS-Project\data\yelp2018\test.txt")
 
 num_users = max(max(train_data.keys()), max(test_data.keys())) + 1
 
@@ -148,13 +148,13 @@ def evaluate_model(model_path, K_layers):
 # =========================
 # RUN ALL MODELS
 # =========================
-base_path = r"F:\SEM-6\ELECTIVES\DEPARTMENT-ELECTIVES\Recommendation Systems\RS-Project\results\tables\MAIN TABLE\Gowalla_train"
+base_path = r"F:\SEM-6\ELECTIVES\DEPARTMENT-ELECTIVES\Recommendation Systems\RS-Project\results\tables\MAIN TABLE\yelp_train"
 
 models = {
-    "k1": (os.path.join(base_path, "k1_results", "best_model.pt"), 1),
-    "k2": (os.path.join(base_path, "k2_results", "best_model.pt"), 2),
-    "k3": (os.path.join(base_path, "k3_results", "best_model.pt"), 3),
-    "k4": (os.path.join(base_path, "k4_results", "best_model.pt"), 4),
+    "k1": (os.path.join(base_path, "yelp_k1", "best_model.pt"), 1),
+    "k2": (os.path.join(base_path, "yelp_k2", "best_model.pt"), 2),
+    "k3": (os.path.join(base_path, "yelp_k3", "best_model.pt"), 3),
+    "k4": (os.path.join(base_path, "yelp_k4", "best_model.pt"), 4),
 }
 
 results = {}
