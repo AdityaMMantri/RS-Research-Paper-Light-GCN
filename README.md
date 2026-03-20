@@ -108,7 +108,7 @@ E = E^K
 
 ---
 
-# 📊 1. Paper vs My Work
+# 1. Paper vs My Work
 
 ## 🔹 Gowalla (Recall@20)
 
@@ -154,7 +154,7 @@ E = E^K
 
 ---
 
-## 🔥 Key Observations
+## Key Observations
 
 - LightGCN **consistently outperforms** LightGCN-Single  
 - Single model:
@@ -166,7 +166,7 @@ E = E^K
 
 ---
 
-# 📊 2. Table-5 (Normalization Study)
+# 2. Table-5 (Normalization Study)
 
 **Normalization Key:**
 - `-Sym` → `D^{-1/2} A D^{-1/2}` (symmetric, both sides) ← **best**
@@ -203,7 +203,7 @@ E = E^K
 
 ---
 
-## 🔥 Insight
+## Insight
 
 - Best normalization:
 ```
@@ -272,7 +272,7 @@ D^{-1/2} A D^{-1/2}
 
 ---
 
-# ⚠️ Critical Analysis
+# Critical Analysis
 
 ## Why the Replicated Results Are Lower
 
@@ -290,7 +290,7 @@ D^{-1/2} A D^{-1/2}
 
 ---
 
-# 💡 Final Conclusions
+# Final Conclusions
 **1. Why LightGCN works:**
 Simplicity by design — removing feature transformation and nonlinear activation actually *improves* performance because ID-based embeddings have no semantic features to transform. Layer aggregation (weighted mean of all propagated embeddings) is essential to address over-smoothing and capture multi-hop neighborhood signals simultaneously.
  
@@ -302,7 +302,7 @@ Symmetric sqrt normalization `D^{-1/2} A D^{-1/2}` is uniquely suited to biparti
 
 ---
 
-# 🧪 How to Run
+# How to Run
 
 ```bash
 python src/test.py
@@ -312,7 +312,7 @@ python src/test_table5.py
 
 ---
 
-# 🔮 Future Work
+# Future Work
 
 - **Learnable layer weights** — replace uniform `1/(K+1)` with learned or attention-based `α_k`
 - **Adaptive depth per user** — sparse users may benefit from more layers; active users from fewer
@@ -322,7 +322,7 @@ python src/test_table5.py
 
 ---
 
-# 👤 Author
+# Author
 
 Aditya Mantri  
 BTech AI & DS  
