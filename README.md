@@ -226,7 +226,7 @@ D^{-1/2} A D^{-1/2}
 
 | Paper (Reference) | Produced (Reproduced) |
 |:-----------------:|:---------------------:|
-| ![LightGCN-Single Paper](assests/light_gcn_single_paper.png) | ![LightGCN-Single Produced](assests/light_gcn_single_produced.png) |
+| ![LightGCN-Single Paper](assets/light_gcn_single_paper.png) | ![LightGCN-Single Produced](assets/light_gcn_single_produced.png) |
 
 **Takeaway:** Both plots confirm that LightGCN-Single peaks around K=2 and degrades at K=3–4 due to over-smoothing. Your reproduction captures this degradation curve faithfully.
 
@@ -240,13 +240,13 @@ D^{-1/2} A D^{-1/2}
 
 | Paper (Reference) | Produced (Reproduced) |
 |:-----------------:|:---------------------:|
-| *(see Table 5 in paper)* | ![Gowalla Table 5](assests/gowalla_table5_produced.png) |
+| *(see Table 5 in paper)* | ![Gowalla Table 5](assets/gowalla_table5_produced.png) |
 
 ### Yelp2018 — Normalization Comparison
 
 | Paper (Reference) | Produced (Reproduced) |
 |:-----------------:|:---------------------:|
-| *(see Table 5 in paper)* | ![Yelp Table 5](assests/yelp_table5_produced.png) |
+| *(see Table 5 in paper)* | ![Yelp Table 5](assets/yelp_table5_produced.png) |
 
 **Takeaway:** Both datasets confirm symmetric normalization as optimal. Left/right-only normalization leads to declining performance as depth increases.
 
@@ -260,13 +260,13 @@ D^{-1/2} A D^{-1/2}
 
 | Gowalla | Yelp2018 |
 |:-------:|:--------:|
-| ![Recall Main Table Gowalla](assests/recall_main_table_gowalla.png) | ![Recall Main Table Yelp](assests/recall_main_table_yelp.png) |
+| ![Recall Main Table Gowalla](assets/recall_main_table_gowalla.png) | ![Recall Main Table Yelp](assets/recall_main_table_yelp.png) |
 
 ### NDCG@20 — Gowalla vs Yelp2018
 
 | Gowalla | Yelp2018 |
 |:-------:|:--------:|
-| ![NDCG Main Table Gowalla](assests/ndcg_main_table_gowalla.png) | ![NDCG Main Table Yelp](assests/ndcg_main_table_yelp.png) |
+| ![NDCG Main Table Gowalla](assets/ndcg_main_table_gowalla.png) | ![NDCG Main Table Yelp](assets/ndcg_main_table_yelp.png) |
 
 **Takeaway:** Your implementation consistently reproduces the correct ranking: LightGCN (Paper) > NGCF > LightGCN (Yours, slightly lower due to sampling/init differences). The trend, relative gains, and cross-layer behavior are all faithfully preserved.
 
