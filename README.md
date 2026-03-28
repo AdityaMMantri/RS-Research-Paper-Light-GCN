@@ -340,7 +340,7 @@ All trained **LightGCN and LightGCN-Single model weights** are available on Hugg
 ### Structure
 
 The repository is organized to mirror the paper experiments:
-
+```
 lightgcn-repo/
 ├── LIGHT-GCN-SINGLE/
 │ ├── k1/
@@ -358,7 +358,7 @@ lightgcn-repo/
 │ └── yelp/
 Each subfolder contains:
 best_model.pt
-
+```
 
 # 📎 Reference
 
