@@ -329,6 +329,37 @@ BTech AI & DS
 
 ---
 
+---
+
+## Pretrained Models (Hugging Face)
+
+All trained **LightGCN and LightGCN-Single model weights** are available on Hugging Face:
+
+👉 https://huggingface.co/Aditya11031/lightgcn-repro
+
+### Structure
+
+The repository is organized to mirror the paper experiments:
+
+lightgcn-repo/
+├── LIGHT-GCN-SINGLE/
+│ ├── k1/
+│ ├── k2/
+│ ├── k3/
+│ └── k4/
+│
+├── MAIN_TABLE/
+│ ├── amazon/
+│ ├── gowalla/
+│ └── yelp/
+│
+├── TABLE_5/
+│ ├── gowalla/
+│ └── yelp/
+Each subfolder contains:
+best_model.pt
+
+
 # 📎 Reference
 
 LightGCN (SIGIR 2020)
