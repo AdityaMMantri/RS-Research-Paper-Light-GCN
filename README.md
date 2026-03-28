@@ -160,7 +160,7 @@ E = E^K
 - Single model:
   - Peaks early (K=2)
   - Then degrades (**over-smoothing**)  
-- Your implementation:
+- My implementation:
   - Matches trend ✔
   - Slightly lower absolute values  
 
@@ -214,13 +214,13 @@ D^{-1/2} A D^{-1/2}
 ---
 # 📈 Visual Results
 
-> All plots are organized by experiment. Each section shows **Paper vs Produced** side by side for direct visual comparison.
+> All plots are organized by experiment. Each section shows **Paper vs My** side by side for direct visual comparison.
 
 ---
 
 ## 🔬 Section A — LightGCN vs LightGCN-Single Comparison
 
-> Compares the **paper's reported** LightGCN-Single behavior against your **reproduced** version, demonstrating over-smoothing degradation at higher layers.
+> Compares the **paper's reported** LightGCN-Single behavior against mine **reproduced** version, demonstrating over-smoothing degradation at higher layers.
 
 ### Gowalla — LightGCN-Single
 
@@ -254,7 +254,7 @@ D^{-1/2} A D^{-1/2}
 
 ## 🔬 Section C — Main Table (Table 3) Reproduction
 
-> Full reproduction of Table 3 from the paper: NGCF vs LightGCN (Paper) vs Your LightGCN, across layer depths.
+> Full reproduction of Table 3 from the paper: NGCF vs LightGCN (Paper) vs My LightGCN, across layer depths.
 
 ### Recall@20 — Gowalla vs Yelp2018
 
@@ -268,7 +268,7 @@ D^{-1/2} A D^{-1/2}
 |:-------:|:--------:|
 | ![NDCG Main Table Gowalla](assets/ndcg_main_table_gowalla.png) | ![NDCG Main Table Yelp](assets/ndcg_main_table_yelp.png) |
 
-**Takeaway:** Your implementation consistently reproduces the correct ranking: LightGCN (Paper) > NGCF > LightGCN (Yours, slightly lower due to sampling/init differences). The trend, relative gains, and cross-layer behavior are all faithfully preserved.
+**Takeaway:** Your implementation consistently reproduces the correct ranking: LightGCN (Paper) > NGCF > LightGCN (mine version, slightly lower due to sampling/init differences). The trend, relative gains, and cross-layer behavior are all faithfully preserved.
 
 ---
 
@@ -356,9 +356,9 @@ lightgcn-repo/
 ├── TABLE_5/
 │ ├── gowalla/
 │ └── yelp/
+```
 Each subfolder contains:
 best_model.pt
-```
 
 # 📎 Reference
 
