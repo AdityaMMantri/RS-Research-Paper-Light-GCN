@@ -6,7 +6,7 @@ This repository presents a **complete reproduction and deep analysis** of:
 
 ---
 
-## 🚀 Objective
+## Objective
 
 This project is a **comparative and experimental study**:
 
@@ -21,7 +21,7 @@ This project is a **comparative and experimental study**:
    - **Light-GCN Single (Figure 4)**
 
 ---
-## 🗂️ Repository Structure
+## Repository Structure
 
 ```
 .
@@ -89,7 +89,7 @@ This project is a **comparative and experimental study**:
 
 ---
 
-## 🧠 Core Model
+## Core Model
 
 ### Propagation
 ```
@@ -218,7 +218,7 @@ D^{-1/2} A D^{-1/2}
 
 ---
 
-## 🔬 Section A — LightGCN vs LightGCN-Single Comparison
+## Section A — LightGCN vs LightGCN-Single Comparison
 
 > Compares the **paper's reported** LightGCN-Single behavior against mine **reproduced** version, demonstrating over-smoothing degradation at higher layers.
 
@@ -232,7 +232,7 @@ D^{-1/2} A D^{-1/2}
 
 ---
 
-## 🔬 Section B — Table 5: Normalization Study
+## Section B — Table 5: Normalization Study
 
 > Compares different normalization strategies. Symmetric normalization `D^{-1/2} A D^{-1/2}` consistently dominates.
 
@@ -252,7 +252,7 @@ D^{-1/2} A D^{-1/2}
 
 ---
 
-## 🔬 Section C — Main Table (Table 3) Reproduction
+## Section C — Main Table (Table 3) Reproduction
 
 > Full reproduction of Table 3 from the paper: NGCF vs LightGCN (Paper) vs My LightGCN, across layer depths.
 
