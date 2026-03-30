@@ -1,4 +1,4 @@
-# LightGCN: Reproduction, Comparative Analysis & Experimental Study
+# LightGCN: A graph based recommendation model
 
 This repository presents a **complete reproduction and deep analysis** of:
 
