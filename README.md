@@ -1,4 +1,5 @@
 # LightGCN: A graph based recommendation model
+LightGCN (Light Graph Convolutional Network) is a graph-based recommendation model that learns user and item representations by propagating information over a user–item interaction graph. It removes unnecessary neural network components and relies purely on neighborhood aggregation to capture collaborative signals. This project reproduces the original LightGCN paper, compares it with a simplified variant (LightGCN-Single), and analyzes the impact of layer depth and normalization on recommendation performance
 
 This repository presents a **complete reproduction and deep analysis** of:
 
